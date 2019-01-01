@@ -3,9 +3,9 @@
 #include <math.h>
 
 int main() {
-  int number = 9 ;
-
-  for (int i=CHAR_BIT; i == 0; i--) {
+  int number = 150;
+  int i=(sizeof(number)*CHAR_BIT)-1;
+  for (; i >= 0; i--) {
     printf ("%d", ((number & (int)pow(2,i)) != 0) ? 1 :0);
   }
 }
